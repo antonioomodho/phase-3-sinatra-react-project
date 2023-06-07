@@ -6,11 +6,11 @@ gem "sinatra", "~> 2.1"
 
 # A fast and simple web server
 # https://github.com/macournoyer/thin
-gem "thin", "~> 1.8"
+# gem "thin", "~> 1.8"
 
 # Rack middleware. Used specifically for parsing the request body into params.
 # https://github.com/rack/rack-contrib
-gem "rack-contrib", "~> 2.3"
+ gem "rack-contrib", "~> 2.3"
 
 # More Rack middleware! Used to handle CORS requests
 # https://github.com/cyu/rack-cors
@@ -40,12 +40,12 @@ group :development do
 
   # Automatically reload when there are changes
   # https://github.com/alexch/rerun
-  gem "rerun"
+  #gem "rerun"
 end
 
 # These gems will only be used when we are running tests
 group :test do
-  gem "database_cleaner", "~> 2.0"
+  gem "database_cleaner"
   gem "rack-test", "~> 1.1"
   gem "rspec", "~> 3.10"
   gem "rspec-json_expectations", "~> 2.2"
