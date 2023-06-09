@@ -4,7 +4,8 @@ source "https://rubygems.org"
 gem "sinatra", "~> 2.1"
 # A fast and simple web server
 # https://github.com/macournoyer/thin
-#gem "thin", "~> 1.8"
+gem "thin", "~> 1.8"
+gem 'puma', '~> 6.1', '>= 6.1.1'
 # Rack middleware. Used specifically for parsing the request body into params.
 # https://github.com/rack/rack-contrib
 gem "rack-contrib", "~> 2.3"
@@ -31,7 +32,7 @@ group :development do
   gem "faker"
   # Automatically reload when there are changes
   # https://github.com/alexch/rerun
-  #gem "rerun"
+  gem "rerun"
 end
 # These gems will only be used when we are running tests
 group :test do

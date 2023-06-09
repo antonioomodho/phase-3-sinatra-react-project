@@ -12,4 +12,5 @@ end
 use Rack::JSONBodyParser
 
 # Our application
-run pet
+use UserController
+run PetController

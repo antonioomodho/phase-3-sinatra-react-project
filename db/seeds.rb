@@ -17,7 +17,7 @@ end
 30.times do
   Pet.create(
     name: Faker::Creature::Animal.name,
-    pet_id: Faker::Alphanumeric.unique.alphanumeric(number: 8),
+    # pet_id: Faker::Alphanumeric.unique.alphanumeric(number: 8),
     breed: Faker::Creature::Dog.breed,
     image_url: Faker::Avatar.image
   )

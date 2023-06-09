@@ -1,13 +1,12 @@
-class UserController < Sinatra::Base
+class PetController < Sinatra::Base
     set :default_content_type, 'application/json'
-    get "/user" do
-        users = User.all
-        users.to_json
+    get "/pets" do
+        pets = Pet.all
+        pets.to_json
     end
-    post '/create' do
+    post '/pets/addpet' do
         begin
             data = JSON.parse(request.body.read)
-            data["originally_fetched"] = false
             pets = Pet.create(data)
             pets.to_json
         rescue => e
@@ -22,7 +21,7 @@ class UserController < Sinatra::Base
         matching_pets = Pet.select{ |pet| pet[:name].include?(query) || pet[:breed].to_s.include?(query)}
         matching_pets.to_json
     end
-
+end
     delete '/pets/destroy/:id' do
         begin
             pet = Pet.find(params[:id])
@@ -46,4 +45,3 @@ class UserController < Sinatra::Base
             }.to_json]
         end
     end
-end
