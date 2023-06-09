@@ -3,7 +3,10 @@
 ## Learning Goals
 
 - Build a web basic API with Sinatra and Active Record to support a React
-  frontend
+  frontend.
+  The front end to this project is
+  
+  https://github.com/antonioomodho/phase3-independent-project.git
 
 ## Introduction
 
